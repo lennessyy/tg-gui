@@ -8,7 +8,7 @@
 *** xref:management/user-management.adoc[]
 *** xref:management/upgrade.adoc[]
 *** xref:management/license.adoc[]
-*** xref:management/healthcheck.adoc[]
+// *** xref:management/healthcheck.adoc[]
 *** xref:components/README.adoc[]
 **** xref:components/gpe.adoc[]
 **** xref:components/gsql.adoc[]
