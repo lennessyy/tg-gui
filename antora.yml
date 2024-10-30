@@ -1,5 +1,5 @@
 name: gui
-title: GraphStudio and Admin Portal
+title: GraphStudio and Admin Portal 3.6
 version: 3.6
 display_version: "3.6"
 start_page: graphstudio:overview.adoc
