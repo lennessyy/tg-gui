@@ -1,5 +1,5 @@
 name: gui
-title: GraphStudio and Admin Portal 3.9
+title: GraphStudio and Admin Portal
 version: "3.9"
 display_version: "3.9"
 start_page: intro:index.adoc
