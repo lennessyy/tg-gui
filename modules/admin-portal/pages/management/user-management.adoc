@@ -212,3 +212,5 @@ image::manage-groups.png[]
 ====
 If you have made changes to users through GSQL after opening the user management page, click the refresh button in the top right corner to reflect the changes in Admin Portal.
 ====
+
+[NOTE]: Starting from version 4.1, the GSQL client allows you to directly grant or revoke privileges for individual users. This eliminates the need to assign permissions to roles and then link those roles to users, simplifying user privilege management.Additionally, this functionality is not yet available in the AdminPortal and can only be performed via the GSQL client.
