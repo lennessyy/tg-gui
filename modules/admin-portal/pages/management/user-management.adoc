@@ -90,7 +90,7 @@ See more details in xref:tigergraph-server:user-access:access-control-model.adoc
 
 All user-defined roles that you can view appear in a table:
 
-image::user-defined-roles.png[]
+image::user_defined_roles_view.png[]
 
 Each row shows one role along with the privileges it contains.
 For global roles, all privileges on either global level or a specific graph will be listed.
@@ -109,7 +109,7 @@ Select image:global-ratio-btn.png[] to start creating a global role.
 Choose global level privileges to assign to this role in the first panel.
 Clicking on a privilege grants that role immediately after the box is checked.
 
-image:grant-privileges.png[]
+image:global_privileges_view.png[]
 
 === Local privileges
 
@@ -212,3 +212,5 @@ image::manage-groups.png[]
 ====
 If you have made changes to users through GSQL after opening the user management page, click the refresh button in the top right corner to reflect the changes in Admin Portal.
 ====
+
+[NOTE]: Starting from version 4.1, the GSQL allows you to directly grant or revoke privileges for individual users. This eliminates the need to assign permissions to roles and then link those roles to users, simplifying user privilege management. Additionally, this functionality is not yet available in the AdminPortal and can only be performed via the GSQL client.
