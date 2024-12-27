@@ -33,7 +33,7 @@ If your browser window is wide, you will see the search panel at the top.
 
 image:log-search-panel.png[image]
 
-If your browser window is narrow, the search panel collapsed. Click the btn:[Search] button to open it.
+If your browser window is narrow, the search panel collapsed. Click the image:search-btn.png[image] button to open it.
 
 image:log-search-button.png[]
 
@@ -58,3 +58,32 @@ image:single-search-result.png[image]
 Clicking on a single search result will show the log content in the display panel and highlight the matching log line.
 
 image:line-highlight-log (1).png[image]
+
+== Read-Only Access to Logs
+
+To streamline the debugging and optimization process, *read-only access to logs* has been introduced for application developers. This feature allows developers to independently view and monitor logs through *GraphStudio* or the *TigerGraph Cloud Portal* without requiring sysadmin intervention.
+
+=== Privileges
+
+==== APP_ACCESS_LOG Privilege
+The `APP_ACCESS_LOG` privilege provides *global access* to logs for authorized users.
+* *Scope:* Global
+* *Default Roles:* Assigned to `superuser` and `globaldesigner` roles by default.
+* *Purpose:* Grants access to view logs across all environments (on-prem and cloud).
+
+==== READ_LOG Privilege
+The `READ_LOG` privilege ensures *read-only access* to logs, preventing modifications while enabling secure monitoring and debugging.
+
+=== Access Points
+
+Users with the appropriate privileges can access logs through *GraphStudio* or the *TigerGraph Cloud Portal*:
+1. *Log Viewing:* Access real-time updates for GSQL query logs and system logs.
+2. *Search Capabilities:* Use the search panel to filter logs by patterns, nodes, and components.
+3. *Download Options:* Download logs for offline analysis if needed.
+
+[NOTE]
+====
+* These tools are designed to provide developers with the ability to debug, optimize queries, and monitor system health independently, reducing dependency on sysadmins.
+* Logs are dynamically updated in real time, ensuring developers can monitor the system and identify issues promptly.
+* The access provided is strictly *read-only*, maintaining system security and log integrity.
+====
