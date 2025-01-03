@@ -33,7 +33,7 @@ If your browser window is wide, you will see the search panel at the top.
 
 image:log-search-panel.png[image]
 
-If your browser window is narrow, the search panel collapsed. Click the image:search-btn.png[image] button to open it.
+If your browser window is narrow, the search panel collapses. Click the image:search-btn.png[image] button to open it.
 
 image:log-search-button.png[]
 
@@ -61,29 +61,52 @@ image:line-highlight-log (1).png[image]
 
 == Read-Only Access to Logs
 
-To streamline the debugging and optimization process, *read-only access to logs* has been introduced for application developers. This feature allows developers to independently view and monitor logs through *GraphStudio* or the *TigerGraph Cloud Portal* without requiring sysadmin intervention.
+As of version 4.1, TigerGraph introduces the ability to grant application developers read-only access to logs. This feature enables developers to:
+
+* *Debug:* Identify and resolve issues using system and GSQL query logs.
+* *Optimize Queries:* Analyze logs to fine-tune queries for better performance.
+* *Monitor System Health:* Track system activity without requiring administrative intervention.
+
+Developers can access logs through:
+
+* *GraphStudio:* A user-friendly interface with log viewing, searching, and downloading features.
+* *TigerGraph Cloud Portal:* Allows developers to monitor and debug logs in real time.
 
 === Privileges
 
-==== APP_ACCESS_LOG Privilege
-The `APP_ACCESS_LOG` privilege provides *global access* to logs for authorized users.
-* *Scope:* Global
-* *Default Roles:* Assigned to `superuser` and `globaldesigner` roles by default.
-* *Purpose:* Grants access to view logs across all environments (on-prem and cloud).
+The following privileges control access to logs in TigerGraph:
+*APP_ACCESS_LOG Privilege*
 
-==== READ_LOG Privilege
-The `READ_LOG` privilege ensures *read-only access* to logs, preventing modifications while enabling secure monitoring and debugging.
+`APP_ACCESS_LOG` privilege grants authorized users global read-only access to logs via GraphStudio or the Cloud Portal.
+
+[separator=¦]
+|===
+¦ Privilege Name ¦ Object ¦ Plural Objects ¦ Scope  ¦ Default Roles
+
+¦ APP_ACCESS_LOG ¦ LOG ¦ LOGS ¦ GLOBAL ¦ superuser, globaldesigner
+|===
+
+*READ_LOG Privilege*
+
+The `READ_LOG` privilege grants *read-only access* to logs, preventing modifications while enabling monitoring and debugging.
+
+[separator=¦]
+|===
+¦ Privilege Name ¦ Object ¦ Plural Objects ¦ Scope  ¦ Default Roles
+
+¦ READ_LOG ¦ LOG ¦ LOGS ¦ GLOBAL ¦ None
+|===
 
 === Access Points
 
 Users with the appropriate privileges can access logs through *GraphStudio* or the *TigerGraph Cloud Portal*:
-1. *Log Viewing:* Access real-time updates for GSQL query logs and system logs.
-2. *Search Capabilities:* Use the search panel to filter logs by patterns, nodes, and components.
-3. *Download Options:* Download logs for offline analysis if needed.
+1. *View Logs:* Access real-time updates for GSQL query logs and system logs.
+2. *Search Logs:* Use the search panel to filter logs by patterns, nodes, and components.
+3. *Download Options:* Download log files for offline analysis to identify and resolve issues effectively.
 
 [NOTE]
 ====
-* These tools are designed to provide developers with the ability to debug, optimize queries, and monitor system health independently, reducing dependency on sysadmins.
-* Logs are dynamically updated in real time, ensuring developers can monitor the system and identify issues promptly.
+* These tools are designed to provide developers with the ability to debug, optimize queries, and monitor system health without requiring intervention from administrative users.
+* Logs are dynamically updated in real time, granting developers to track changes and identify issues promptly.
 * The access provided is strictly *read-only*, maintaining system security and log integrity.
 ====
