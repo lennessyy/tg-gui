@@ -75,6 +75,7 @@ Developers can access logs through:
 === Privileges
 
 The following privileges control access to logs in TigerGraph:
+
 *APP_ACCESS_LOG Privilege*
 
 `APP_ACCESS_LOG` privilege grants authorized users global read-only access to logs via GraphStudio or the Cloud Portal.
@@ -100,6 +101,7 @@ The `READ_LOG` privilege grants *read-only access* to logs, preventing modificat
 === Access Points
 
 Users with the appropriate privileges can access logs through *GraphStudio* or the *TigerGraph Cloud Portal*:
+
 1. *View Logs:* Access real-time updates for GSQL query logs and system logs.
 2. *Search Logs:* Use the search panel to filter logs by patterns, nodes, and components.
 3. *Download Options:* Download log files for offline analysis to identify and resolve issues effectively.
